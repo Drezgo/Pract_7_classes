@@ -9,7 +9,7 @@ public class Main {
         sizemeter1.whatsize(189);
         sizemeter1.whatsection(10);
 
-        price1.pricesheet(6);
+        price1.pricesheet(3);
 
 
 

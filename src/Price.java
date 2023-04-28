@@ -13,7 +13,7 @@ public class Price {
 
     void pricesheet (int k){
         Scanner scan = new Scanner(System.in);
-        for (int i=0;k<i;i++){
+        for (int i=0;i<k;i++){
             System.out.print("Введіть ціну товару: ");
             double prcone=scan.nextInt();
             price+=prcone;
