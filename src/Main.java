@@ -1,15 +1,15 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
-        Sizemeter sizemeter1 = new Sizemeter(0,0);
-        Price price1 = new Price(0,'-');
+        SizeMeter sizeMeter1 = new SizeMeter();
+        Price price1 = new Price();
+        Exchange exchange1 = new Exchange("EU");
 
-        sizemeter1.whatsize(189);
-        sizemeter1.whatsection(10);
+        sizeMeter1.whatsize(189);
+        sizeMeter1.whatsection(10);
 
-        price1.pricesheet(3);
+        price1.pricesheet(3,'+');
+
 
 
 

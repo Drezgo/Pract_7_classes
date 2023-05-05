@@ -1,14 +1,13 @@
-public class Sizemeter {
+public class SizeMeter {
     double height;
     char bs;
     int age;
-    public Sizemeter(double height, int age) {
-        this.height = height;
-        this.age = age;
+
+    public SizeMeter() {
     }
 
     void whatsize(double height) {
-
+        char bs;
         if (height <= 170) {
             bs = 'S';
             System.out.println("Ur size is: " + bs);

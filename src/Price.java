@@ -1,24 +1,39 @@
 import java.util.Scanner;
 
 public class Price {
-    int kil;
+    int kilkist;
     double bonuses;
-    char isb;
-    double price=0.0;
+    double price = 0.0;
 
-    public Price(int kil, char isb) {
-        this.kil = kil;
-        this.isb = isb;
+    public Price() {
     }
 
-    void pricesheet (int k){
+    void pricesheet (int kilkist) {
+//        Обчислення чеку без бонусів
         Scanner scan = new Scanner(System.in);
-        for (int i=0;i<k;i++){
-            System.out.print("Введіть ціну товару: ");
-            double prcone=scan.nextInt();
+        for (int i = 0; i < kilkist; i++) {
+            System.out.print("Введіть ціну " + (i + 1) + " товару: ");
+            double prcone = scan.nextDouble();
+            price += prcone;
+        }
+        System.out.println("Кінцева вартість товарів: "+price+" гривень (без бонусів)");
+    }
+
+    void pricesheet (int kilkist, double bonuses) {
+//        Обчислення чеку з бонусами
+        Scanner scan = new Scanner(System.in);
+        for (int i=0;i<kilkist;i++){
+            System.out.print("Введіть ціну "+(i+1)+" товару: ");
+            double prcone=scan.nextDouble();
             price+=prcone;
         }
-        System.out.println(price);
+        price-=bonuses;
+        System.out.println("Кінцева вартість товарів: "+price+" гривень");
     }
+
+
+
+
+
 }
 
